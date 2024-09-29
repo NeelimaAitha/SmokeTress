@@ -4,6 +4,15 @@ const { User, Address } = require('./models');
 
 const app = express();
 app.use(bodyParser.json());
+app.get('/user', (req, res) => {
+  res.send('User route works!');
+});
+
+// Or if you're fetching users from the database
+app.get('/users', async (req, res) => {
+  const users = await User.findAll();  // Assuming you're using Sequelize or some ORM
+  res.json(users);
+});
 
 // POST endpoint to register user and address
 app.post('/register', async (req, res) => {
