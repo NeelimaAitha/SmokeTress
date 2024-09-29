@@ -4,7 +4,8 @@
   "description": "User registration with address storage using Node.js and Sequelize",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "npm rebuild sqlite3"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
